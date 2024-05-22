@@ -6,8 +6,15 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+    res.render("index.ejs");
+  });
 
-app.listen(port, (err) => {
-    if (err) console.log(err);
+
+
+
+
+  
+app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
