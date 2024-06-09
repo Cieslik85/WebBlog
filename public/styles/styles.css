@@ -1,3 +1,146 @@
-h1 {
-    color: blue;
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
+body{
+    margin-bottom: 100px;
+}
+
+.box-shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.header {
+    background-color: rgb(181, 233, 237);
+    height: 4em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar {
+    padding: 2vh;
+    text-align: right;
+}
+
+.pos-form form{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-box {
+    border-radius: 5px;
+    width: 33%;
+    margin: 5px;
+}
+
+#title-box::placeholder {
+    text-align: center;
+}
+
+#text-box {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#text-box::placeholder {
+    text-align: center;
+}
+
+.top-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fb961a;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 65%;
+    
+}
+
+.search-box {
+    border-radius: 10px;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    gap: 10px;
+}
+ 
+.btn {
+    border-radius: 5px;
+    padding: 2px;
+    background-color: #87bfcf;
+}
+
+.navbar a {
+    color: white;
+    display: inline-block;
+    transition: all .3s ease;
+    background-color: #d11313;
+    padding: 1.5px;
+    margin: 5px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
+
+.date {
+    margin: 10px;
+    text-align: right;
+    
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(181, 233, 237);
+    text-align: center;
+}
+
+.footer-social-line {
+    padding: 0px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+}
+
+#icon-git {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 2px;
+    position: relative;
+    bottom: 3px;
+
+}
+
+#icon-mail {
+    width: 48px;
+    height: 48px;
+}
+
+#copyright {
+    color: black;
+    padding: 10px;
+    margin-bottom: 0;
+}
+

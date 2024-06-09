@@ -1,16 +1,40 @@
-<%- include("partials/header.ejs") %>
-
-<h1>Creative writing</h1>
+<%- include ("partials/header.ejs"); %>
 
 
 
+<section>
+  <div class="top-container">
+    <% artList.forEach((art, index) => { %>
+      <div class="card box-shadow" id="post_<%= index %>">
+        <h2 class="title"><%= art.title %></h2>
+        <p><%= art.content %></p>
+        <div class="date">
+          <p><%= art.date %></p>
+        </div>
+        <button 
+        class="btn" 
+        onclick="editPost(<%= index %>)">
+          Edit
+        </button>
+        <button
+        class="btn" 
+        onclick="deletePost(<%= index %>)">
+          Delete
+        </button>
+      </div>
+    <% }); %>
+  </div>
+</section>
 
 
-<form action="/submit" method="POST">
-  <label for="Blog body">Write your blog</label>
-  <input type="text" name="Blog body" placeholder="Embrace your thoughts here">
-  <input type="submit" value="Submit">
-</form>
+
+
+
+
+
+
+
+
 
 
 

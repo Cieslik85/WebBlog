@@ -1,0 +1,29 @@
+<%- include ("partials/header.ejs"); %>
+
+<div class="pos-form">
+  <form action="/submit" method="POST">
+    <label for="Blog body">Start with title </label>
+    <input
+      id="title-box"
+      class="box-shadow"
+      type="text" 
+      name="atitle" 
+      placeholder="title"
+      required minlength="3">
+    <textarea 
+      id="text-box"
+      class="box-shadow" 
+      name="acontent"
+      rows="10" 
+      cols="60"
+      placeholder="Embrace your thoughts"
+      required>
+    </textarea>
+    <input 
+      class="btn box-shadow" 
+      type="submit" 
+      value="Submit">
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
