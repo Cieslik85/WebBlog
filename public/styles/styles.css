@@ -47,6 +47,7 @@ body{
 
 #text-box {
     border-radius: 5px;
+    width: 33%;
     margin: 5px;
     padding: 5px;
 }
@@ -69,6 +70,13 @@ body{
     text-align: center;
     width: 65%;
     
+}
+
+.date {
+    border: solid rgb(239, 239, 239);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2px;
 }
 
 .search-box {
@@ -100,11 +108,7 @@ body{
     transform: scale(1.1);
 }
 
-.date {
-    margin: 10px;
-    text-align: right;
-    
-}
+
 .footer {
     position: fixed;
     left: 0;

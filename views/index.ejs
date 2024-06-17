@@ -2,6 +2,27 @@
 
 <section>
   <div class="top-container">
+
+    <div class="card box-shadow">
+        
+      <h2 class="title">The Future of AI in Computing Technologies</h2>
+  
+      <p>Artificial Intelligence (AI) is set to revolutionize computing technologies
+         by enhancing automation, efficiency, and data analysis across industries. 
+         AI will enable highly personalized user experiences and bolster cybersecurity 
+         by detecting and responding to threats in real-time. 
+         The future will see increased human-AI collaboration, 
+         where AI augments human capabilities, driving innovation in creative and scientific fields. 
+         Ethical considerations will be crucial, with a focus on eliminating biases, ensuring transparency, and protecting privacy. 
+         Additionally, the convergence of AI and quantum computing promises groundbreaking advancements in various domains. 
+         Overall, AI's integration into computing technologies will transform industries and improve societal outcomes, 
+         highlighting the importance of responsible development and use.</p>
+        <div class="date">
+          <p>17/06/2024, 14:03:46</p>
+        </div>
+      
+    </div>
+
     <% artList.forEach((art, index) => { %>
       
       <div class="card box-shadow" id="<%= index %>">
@@ -9,9 +30,9 @@
         <h2 class="title"><%= art.title %></h2>
     
         <p><%= art.content %></p>
-        <div class="date">
-          <p><%= art.date %></p>
-        </div>
+          <div class="date">
+            <p><%= art.date %></p>
+          </div>
         
       </div>
     
