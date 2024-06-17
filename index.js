@@ -28,8 +28,6 @@ app.get("/write", (req, res) => {
   res.render("write-blog.ejs");
 });
 
-
-
 app.post("/submit", (req, res) => {
   const { atitle, acontent } = req.body;
   const newArt = {
@@ -41,6 +39,7 @@ app.post("/submit", (req, res) => {
   artList.push(newArt);
   res.redirect("/");
 });
+
 
 
 app.listen(port, () => {
