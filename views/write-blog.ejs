@@ -1,7 +1,9 @@
 <%- include ("partials/header.ejs"); %>
 
+
 <div class="pos-form">
   <form action="/submit" method="POST">
+    
     <label for="Blog body">Start with title </label>
     <input
       id="title-box"
@@ -15,7 +17,7 @@
       class="box-shadow" 
       name="acontent"
       rows="10" 
-      cols="60"
+      cols="75"
       placeholder="Embrace your thoughts"
       required>
     </textarea>
@@ -23,6 +25,7 @@
       class="btn box-shadow" 
       type="submit" 
       value="Submit">
+    
   </form>
 </div>
 
