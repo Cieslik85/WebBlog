@@ -34,14 +34,14 @@
             <p><%= art.date %></p>
           </div>
           <div class="btn-div">
-           
+            <form action="/edit/<%= index %>" method="GET">
+              <button class="btn">Edit</button>
+            </form>
             <form action="/delete" method="POST">
               <input type="hidden" name="postId" value="<%=index%>">
               <button class="btn">Delete</button>
             </form>
-            <form action="/edit/<%= index %>" method="GET">
-              <button class="btn">Edit</button>
-            </form>
+            
           </div>
       </div>
     
