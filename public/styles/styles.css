@@ -88,8 +88,13 @@ body{
  
 .btn {
     border-radius: 5px;
-    padding: 2px;
+    padding: 4px;
     background-color: #87bfcf;
+    margin: 3px;
+}
+.btn-div {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {

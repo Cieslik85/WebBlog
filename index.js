@@ -6,8 +6,6 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
 const artList = [];
 let currentDate;
 
@@ -16,7 +14,7 @@ function capitalizeFirstLetter(string) {
 };
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { artList: artList, currentDate: currentDate, postId: artList.length });
+  res.render("index.ejs", { artList: artList, currentDate: currentDate });
 });
 
 app.get("/write", (req, res) => {
@@ -38,8 +36,29 @@ app.post("/submit", (req, res) => {
   res.redirect("/");
 });
 
+app.post("/delete", (req, res) => {
+  const postToDel = req.body.postId; 
+  artList.splice(postToDel, 1);
+  res.redirect("/");
 
+});
+
+app.get("/edit/:id", (req, res) => {
+  const postId = req.params.id;
+  const post = artList[postId];
+  res.render("edit-blog.ejs", { post: post, postId: postId });
+});
+
+app.post("/edit/:id", (req, res) => {
+  const postId = req.params.id;
+  const { atitle, acontent } = req.body;
+  artList[postId].title = capitalizeFirstLetter(atitle);
+  artList[postId].content = capitalizeFirstLetter(acontent);
+  artList[postId].date = new Date().toLocaleString();
+  res.redirect("/");
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
+
 });

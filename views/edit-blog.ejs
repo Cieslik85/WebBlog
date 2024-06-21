@@ -1,0 +1,29 @@
+<%- include ("partials/header.ejs"); %>
+
+<div class="pos-form">
+  <form action="/edit/<%= postId %>" method="POST">
+    <label for="Blog body">Edit your title</label>
+    <input
+      id="title-box"
+      class="box-shadow"
+      type="text" 
+      name="atitle" 
+      value="<%= post.title %>"
+      required minlength="3">
+    <textarea 
+      id="text-box"
+      class="box-shadow" 
+      name="acontent"
+      rows="10" 
+      cols="75"
+      required>
+      <%= post.content %>
+    </textarea>
+    <input 
+      class="btn box-shadow" 
+      type="submit" 
+      value="Update">
+  </form>
+</div>
+
+<%- include("partials/footer.ejs"); %>
