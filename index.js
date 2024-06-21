@@ -8,9 +8,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const artList = [];
 let currentDate;
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+function dateFormat() {
+  let d = new Date();
+   let newDate = d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+   return newDate;
 };
 
 app.get("/", (req, res) => {
@@ -19,7 +26,8 @@ app.get("/", (req, res) => {
 
 app.get("/write", (req, res) => {
   if (!currentDate) {
-    currentDate = new Date().toLocaleString();
+    currentDate = dateFormat();
+    console.log(currentDate);
   }
   res.render("write-blog.ejs");
 });
@@ -29,7 +37,7 @@ app.post("/submit", (req, res) => {
   const newArt = {
     title: capitalizeFirstLetter(atitle),
     content: capitalizeFirstLetter(acontent),
-    date: new Date().toLocaleString(),
+    date: dateFormat(),
     id: artList.length,
   };
   artList.push(newArt);
